@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convert</title>
+  <link rel="icon" type="image/png" href="./public/favicon.png" />
+  <link rel="stylesheet" href="./public/style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+</head>
+<body>
+  <header>
+    <h1>Convert</h1>
+    <button id="toggleTheme">🌙</button>
+  </header>
+  <main>
+    <nav>
+      <ul id="listQuantity">
+        <a href="#" onclick="loadQuantity('length'); return false;"><li id="item0">Length</li></a>
+        <a href="#" onclick="loadQuantity('mass'); return false;"><li id="item1">Mass</li></a>
+        <a href="#" onclick="loadQuantity('time'); return false;"><li id="item2">Time</li></a>
+        <a href="#" onclick="loadQuantity('temperature'); return false;"><li id="item3">Temperature</li></a>
+        <a href="#" onclick="loadQuantity('angle'); return false;"><li id="item4">Angle</li></a>
+        <a href="#" onclick="loadQuantity('area'); return false;"><li id="item5">Area</li></a>
+        <a href="#" onclick="loadQuantity('volume'); return false;"><li id="item6">Volume</li></a>
+        <a href="#" onclick="loadQuantity('digital-storage'); return false;"><li id="item7">Digital Storage</li></a>
+        <a href="#" onclick="loadQuantity('currency'); return false;"><li id="item8">Currency</li></a>
+      </ul>
+    </nav>
+    <div id="converterSpace">
+      <div>
+        <h2 id="quantityTitle"></h2>
+      </div>
+      <div>
+        <select id="optionQuantity" onchange="loadQuantity(this.value)">
+          <option value="length">Length</option>
+          <option value="mass">Mass</option>
+          <option value="time">Time</option>
+          <option value="temperature">Temperature</option>
+          <option value="angle">Angle</option>
+          <option value="area">Area</option>
+          <option value="volume">Volume</option>
+          <option value="digital-storage">Digital Storage</option>
+          <option value="currency">Currency</option>
+        </select>
+      </div>
+      <div id="converterTop" class="converter glass">
+        <div class="input">
+          <input id="inputTop" type="number" value="1" oninput="convert();" />
+        </div>
+        <div class="option">
+          <select id="optionTop" onchange="convert();"></select>
+        </div>
+      </div>
+      <div id="converterBottom" class="converter glass">
+        <div class="input">
+          <input id="inputBottom" type="number" oninput="convertBack();" />
+        </div>
+        <div class="option">
+          <select id="optionBottom" onchange="convert();"></select>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    Developed by <strong>Karthik Shet</strong>
+  </footer>
+  <script src="./public/index.js"></script>
+</body>
+</html>
